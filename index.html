@@ -326,22 +326,15 @@
   .email-line{ padding:24px 0; }
   .email-line a{ font-family:var(--serif); font-size:19px; color:var(--navy); border-bottom:1px solid var(--bronze); }
 
-  form{ display:flex; flex-direction:column; gap:20px; }
-  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:20px; }
-  @media (max-width:560px){ .form-row{ grid-template-columns:1fr; } }
-  label{ font-size:13px; font-weight:500; color:var(--ink-soft); display:block; margin-bottom:7px; }
-  input, textarea{
-    width:100%; border:1px solid var(--line); background:var(--paper);
-    padding:13px 14px; font-family:var(--sans); font-size:14.5px; color:var(--ink);
-    border-radius:2px; transition:border-color .2s ease;
+  ::selection{ background:var(--bronze); color:var(--paper); }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
   }
-  input:focus, textarea:focus{ outline:none; border-color:var(--bronze); }
-  textarea{ resize:vertical; min-height:120px; }
-  .consent{ display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--ink-soft); }
-  .consent input{ width:auto; margin-top:3px; }
-  .form-note{ font-size:12.5px; color:#8A8578; }
-  #formStatus{ font-size:14px; padding-top:4px; display:none; }
-  #formStatus.show{ display:block; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--bronze); outline-offset:2px;
+  }
 
   /* ============ FOOTER ============ */
   footer{ background:var(--navy-deep); color:#B9C0CB; padding:50px 0 24px; }
@@ -362,16 +355,6 @@
   .foot-legal a:hover{ color:var(--paper); }
   @media (max-width:800px){ .foot-top{ grid-template-columns:1fr 1fr; row-gap:36px; } }
   @media (max-width:520px){ .foot-top{ grid-template-columns:1fr; } .foot-bottom{ flex-direction:column; align-items:flex-start; } }
-
-  ::selection{ background:var(--bronze); color:var(--paper); }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
-  }
-
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
-    outline:2px solid var(--bronze); outline-offset:2px;
-  }
 </style>
 </head>
 <body>
@@ -530,7 +513,7 @@
   <div class="wrap">
     <div>
       <div class="eyebrow">About JSC NIXI</div>
-      <h2 style="font-size:clamp(26px,3vw,36px); margin-top:14px; max-width:12ch;">Strategic thinking, applied with discipline.</h2>
+      <h2 style="font-size:clamp(26px,3vw,36px); margin-top:14px; max-width:12ch;">Strategy</h2>
       <div class="about-pillars">
         <div class="pillar">
           <h4>Mission</h4>
@@ -548,7 +531,7 @@
 
       <div class="partners partners-single">
         <div class="partner">
-          <img class="partner-photo" src="images/nikoloz-khundzakishvili.jpg" alt="Nikoloz Khundzakishvili">
+          <img class="partner-photo" src="nikoloz-khundzakishvili.jpg" alt="Nikoloz Khundzakishvili">
           <div class="partner-name">Nikoloz Khundzakishvili</div>
           <div class="partner-role">Principal Partner</div>
         </div>
@@ -633,41 +616,7 @@
     <div>
       <div class="eyebrow">Get in touch</div>
       <h2 style="font-size:clamp(24px,2.8vw,32px); margin-top:14px; margin-bottom:28px;">Start a conversation.</h2>
-      <form id="contactForm" novalidate>
-        <div class="form-row">
-          <div>
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" required autocomplete="name">
-          </div>
-          <div>
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" autocomplete="organization">
-          </div>
-        </div>
-        <div class="form-row">
-          <div>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required autocomplete="email">
-          </div>
-          <div>
-            <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone" autocomplete="tel">
-          </div>
-        </div>
-        <div>
-          <label for="message">How can we help?</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <label class="consent">
-          <input type="checkbox" required>
-          I agree to be contacted by JSC NIXI Consultancy regarding this inquiry, per the Privacy Policy.
-        </label>
-        <div>
-          <button type="submit" class="btn btn-primary">Send Inquiry</button>
-          <p id="formStatus"></p>
-        </div>
-        <p class="form-note">This form sends your inquiry directly to info@jscnixi.com. For a secure production deployment, connect it to a server-side handler or form service of your choice.</p>
-      </form>
+      <p style="color:var(--ink-soft); font-size:16px; line-height:1.7;">Reach out any time by email and we'll get back to you shortly.</p>
     </div>
   </div>
 </section>
@@ -697,7 +646,7 @@
       </div>
     </div>
     <div class="foot-membership">
-      <img src="images/hellenic-georgian-chamber-logo.png" alt="Hellenic-Georgian Chamber of Commerce" class="chamber-logo">
+      <img src="hellenic-georgian-chamber-logo.png" alt="Hellenic-Georgian Chamber of Commerce" class="chamber-logo">
       <p>JSC NIXI Consultancy is a member of the Hellenic-Georgian Chamber of Commerce.</p>
     </div>
     <div class="foot-bottom">
@@ -723,19 +672,6 @@
     menu.classList.remove('open');
     burger.setAttribute('aria-expanded', false);
   }));
-
-  // (Footer copyright year is static — see footer markup)
-
-  // Contact form (client-side only — wire to a backend/form service for production)
-  const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    status.textContent = 'Thank you — your inquiry has been received. We will respond shortly.';
-    status.style.color = '#4A6B4A';
-    status.classList.add('show');
-    form.reset();
-  });
 
   // ===== Analytics placeholder =====
   // Replace G-XXXXXXXXXX with the client's Google Analytics 4 Measurement ID.
