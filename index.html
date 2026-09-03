@@ -60,7 +60,12 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; scrollbar-width:thin; scrollbar-color:transparent transparent;}
+  html.is-scrolling{ scrollbar-color: rgba(27,42,65,0.35) transparent; }
+  ::-webkit-scrollbar{ width:10px; }
+  ::-webkit-scrollbar-track{ background:transparent; }
+  ::-webkit-scrollbar-thumb{ background:transparent; border-radius:6px; transition:background .4s ease; }
+  html.is-scrolling::-webkit-scrollbar-thumb{ background:rgba(27,42,65,0.35); }
   body{
     margin:0;
     background:var(--paper);
@@ -210,13 +215,6 @@
   .route-svg text{ font-family:var(--sans); }
   .route-label{ font-size:11.5px; letter-spacing:0.03em; fill:#C9CFD9; }
   .route-city{ font-family:var(--serif); font-size:16px; fill:var(--paper); }
-
-  .intro{ padding:60px 0; border-bottom:1px solid var(--line); }
-  .intro .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; }
-  .intro h2{ font-size:clamp(24px,2.6vw,32px); max-width:14ch; }
-  .intro-body{ font-size:16.5px; color:var(--ink-soft); line-height:1.75; max-width:56ch; }
-  .intro-body p + p{ margin-top:16px; }
-  @media (max-width:800px){ .intro .wrap{ grid-template-columns:1fr; gap:22px; } }
 
   .sec-head{ margin-bottom:42px; max-width:640px; }
   .sec-head h2{ font-size:clamp(26px,3vw,38px); margin-top:14px; }
@@ -398,14 +396,6 @@
           <text x="0" y="-20" text-anchor="middle" class="route-label">N</text>
         </g>
       </svg>
-    </div>
-  </div>
-</section>
-
-<section class="intro">
-  <div class="wrap">
-    <div class="intro-body">
-      <p>From our office in Tbilisi, we advise companies, investors, and institutions on strategy and market entry, and build the relationships that turn cross-border ambition into completed transactions.</p>
     </div>
   </div>
 </section>
@@ -615,6 +605,15 @@
     menu.classList.remove('open');
     burger.setAttribute('aria-expanded', false);
   }));
+
+  let scrollFadeTimer;
+  window.addEventListener('scroll', () => {
+    document.documentElement.classList.add('is-scrolling');
+    clearTimeout(scrollFadeTimer);
+    scrollFadeTimer = setTimeout(() => {
+      document.documentElement.classList.remove('is-scrolling');
+    }, 900);
+  }, { passive: true });
 </script>
 
 </body>
