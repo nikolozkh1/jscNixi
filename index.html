@@ -9,7 +9,6 @@
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.jscnixi.com/">
 
-<!-- Open Graph / Social sharing -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="JSC NIXI Consultancy — Strategic Advisory. Business Development. International Connections.">
 <meta property="og:description" content="An international strategic advisory and business development firm connecting Georgia, the EU, and global markets.">
@@ -20,10 +19,8 @@
 <meta name="twitter:title" content="JSC NIXI Consultancy">
 <meta name="twitter:description" content="Strategic Advisory. Business Development. International Connections.">
 
-<!-- Favicon (inline SVG, monogram mark) -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%231B2A41'/%3E%3Cpath d='M18 44V20h4.6l14.8 18.3V20H42v24h-4.6L22.6 25.7V44H18z' fill='%23F3F1EA'/%3E%3Ccircle cx='48' cy='16' r='3' fill='%23A8763E'/%3E%3C/svg%3E">
 
-<!-- Structured data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -118,7 +115,6 @@
   .btn-ghost-light{ background:transparent; color:var(--paper); border-color:var(--line-on-navy); }
   .btn-ghost-light:hover{ background:var(--paper); color:var(--navy); }
 
-  /* ============ NAV ============ */
   header{
     position:sticky; top:0; z-index:100;
     background:rgba(243,241,234,0.92);
@@ -174,7 +170,6 @@
     .burger{ display:flex; }
   }
 
-  /* ============ HERO ============ */
   .hero{
     background:var(--navy);
     color:var(--paper);
@@ -206,24 +201,16 @@
 
   .hero-map{ position:relative; }
 
-  .hero-bg-line{
-    position:absolute; inset:0; z-index:1; opacity:0.35; pointer-events:none;
-  }
-
   @media (max-width:900px){
     .hero .wrap{ grid-template-columns:1fr; gap:48px; }
     .hero{ padding:56px 0 56px; }
     .hero-map{ order:-1; }
   }
 
-  /* ============ ROUTE MAP (SVG motif reused in hero + network) ============ */
   .route-svg text{ font-family:var(--sans); }
   .route-label{ font-size:11.5px; letter-spacing:0.03em; fill:#C9CFD9; }
-  .route-label-dark{ font-size:11.5px; letter-spacing:0.03em; fill:var(--ink-soft); }
   .route-city{ font-family:var(--serif); font-size:16px; fill:var(--paper); }
-  .route-city-dark{ font-family:var(--serif); font-size:16px; fill:var(--navy); }
 
-  /* ============ INTRO STRIP ============ */
   .intro{ padding:60px 0; border-bottom:1px solid var(--line); }
   .intro .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; }
   .intro h2{ font-size:clamp(24px,2.6vw,32px); max-width:14ch; }
@@ -231,12 +218,10 @@
   .intro-body p + p{ margin-top:16px; }
   @media (max-width:800px){ .intro .wrap{ grid-template-columns:1fr; gap:22px; } }
 
-  /* ============ SECTION HEADERS ============ */
   .sec-head{ margin-bottom:42px; max-width:640px; }
   .sec-head h2{ font-size:clamp(26px,3vw,38px); margin-top:14px; }
   .sec-head p{ margin-top:16px; color:var(--ink-soft); font-size:16px; line-height:1.7; }
 
-  /* ============ SERVICES ============ */
   .services{ padding:76px 0; background:var(--paper-dim); border-bottom:1px solid var(--line); }
   .service-list{ border-top:1px solid var(--line); }
   .service-row{
@@ -249,22 +234,19 @@
     .service-row{ grid-template-columns:1fr; gap:8px; }
   }
 
-  /* ============ INDUSTRIES ============ */
   .industries{ padding:76px 0; border-bottom:1px solid var(--line); }
   .industry-grid{
-    display:grid; grid-template-columns:repeat(4, 1fr); gap:1px;
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px;
     background:var(--line); border:1px solid var(--line);
   }
   .industry-cell{
     background:var(--paper); padding:28px 24px; min-height:108px;
     display:flex; flex-direction:column; justify-content:space-between;
   }
-  .industry-cell .num{ font-size:12px; color:var(--bronze); font-weight:600; }
   .industry-cell h4{ font-size:16px; font-weight:560; margin-top:14px; line-height:1.3; }
   @media (max-width:900px){ .industry-grid{ grid-template-columns:repeat(2,1fr); } }
   @media (max-width:520px){ .industry-grid{ grid-template-columns:1fr; } }
 
-  /* ============ NETWORK ============ */
   .network{ padding:76px 0; background:var(--navy); color:var(--paper); overflow:hidden; }
   .network .wrap{ display:grid; grid-template-columns:0.95fr 1.05fr; gap:60px; align-items:center; }
   .network h2{ color:var(--paper); }
@@ -278,7 +260,6 @@
   .network-stats-label{ font-size:12.5px; color:#9FA8B5; margin-top:10px; }
   @media (max-width:900px){ .network .wrap{ grid-template-columns:1fr; gap:40px; } }
 
-  /* ============ ABOUT ============ */
   .about{ padding:76px 0; border-bottom:1px solid var(--line); }
   .about .wrap{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px; }
   .about-pillars{ display:flex; flex-direction:column; gap:0; margin-top:10px; }
@@ -291,16 +272,6 @@
   .about-copy strong{ color:var(--navy); font-weight:600; }
   .partners{ display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:32px; padding-top:28px; border-top:1px solid var(--line); }
   .partners-single{ grid-template-columns:auto 1fr; align-items:start; gap:22px; }
-  .partner-photo-placeholder{
-    width:88px; height:88px; border-radius:2px;
-    background:var(--paper-dim);
-    border:1px dashed var(--line);
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:16px;
-  }
-  .partner-photo-placeholder span{
-    font-family:var(--serif); font-size:22px; color:var(--sage); letter-spacing:0.02em;
-  }
   .partner-photo{
     width:120px; height:120px; border-radius:2px; object-fit:cover;
     margin-bottom:16px; display:block;
@@ -312,7 +283,6 @@
   @media (max-width:480px){ .partners{ grid-template-columns:1fr; } .partners-single .partner{ grid-template-columns:1fr; } .partners-single .partner-photo{ margin-bottom:14px; } }
   @media (max-width:860px){ .about .wrap{ grid-template-columns:1fr; gap:36px; } }
 
-  /* ============ CONTACT ============ */
   .contact{ padding:76px 0; }
   .contact .wrap{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px; }
   .offices{ display:flex; flex-direction:column; gap:0; }
@@ -336,7 +306,6 @@
     outline:2px solid var(--bronze); outline-offset:2px;
   }
 
-  /* ============ FOOTER ============ */
   footer{ background:var(--navy-deep); color:#B9C0CB; padding:50px 0 24px; }
   .foot-top{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px; padding-bottom:36px; border-bottom:1px solid var(--line-on-navy); }
   .foot-membership{ padding:20px 0; border-bottom:1px solid var(--line-on-navy); display:flex; align-items:center; gap:14px; }
@@ -350,16 +319,12 @@
   .foot-col a:hover{ color:var(--paper); }
   .foot-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:28px; flex-wrap:wrap; gap:14px; }
   .foot-bottom p{ font-size:13px; color:#7C8494; }
-  .foot-legal{ display:flex; gap:22px; }
-  .foot-legal a{ font-size:13px; color:#9FA8B5; }
-  .foot-legal a:hover{ color:var(--paper); }
   @media (max-width:800px){ .foot-top{ grid-template-columns:1fr 1fr; row-gap:36px; } }
   @media (max-width:520px){ .foot-top{ grid-template-columns:1fr; } .foot-bottom{ flex-direction:column; align-items:flex-start; } }
 </style>
 </head>
 <body>
 
-<!-- ============ HEADER / NAV ============ -->
 <header>
   <div class="wrap nav">
     <a href="#home" class="logo">
@@ -392,7 +357,6 @@
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
 <section class="hero" id="home">
   <div class="wrap">
     <div>
@@ -406,7 +370,6 @@
     </div>
     <div class="hero-map">
       <svg class="route-svg" viewBox="0 0 420 380" width="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration representing JSC NIXI Consultancy's reach from Tbilisi">
-        <!-- coordinate grid, quiet -->
         <g stroke="var(--line-on-navy)" stroke-width="1">
           <line x1="0" y1="60" x2="420" y2="60"/>
           <line x1="0" y1="160" x2="420" y2="160"/>
@@ -416,23 +379,19 @@
           <line x1="210" y1="0" x2="210" y2="380"/>
           <line x1="350" y1="0" x2="350" y2="380"/>
         </g>
-        <!-- reach rings, centered on Tbilisi -->
         <g fill="none" stroke="#A8763E">
           <circle cx="220" cy="200" r="42" stroke-width="1.3" stroke-dasharray="3 6" opacity="0.85"/>
           <circle cx="220" cy="200" r="88" stroke-width="1.1" stroke-dasharray="3 7" opacity="0.55"/>
           <circle cx="220" cy="200" r="138" stroke-width="1" stroke-dasharray="2 8" opacity="0.3"/>
         </g>
-        <!-- outbound heading lines -->
         <g stroke="#A8763E" stroke-width="1" stroke-dasharray="2 6" opacity="0.4">
           <line x1="220" y1="200" x2="360" y2="70"/>
           <line x1="220" y1="200" x2="60" y2="40"/>
           <line x1="220" y1="200" x2="380" y2="300"/>
         </g>
-        <!-- Tbilisi node -->
         <circle cx="220" cy="200" r="5" fill="#A8763E"/>
         <text x="236" y="196" class="route-city">Tbilisi</text>
         <text x="236" y="214" class="route-label">41.72°N, 44.79°E</text>
-        <!-- small compass -->
         <g transform="translate(30,30)" opacity="0.55">
           <circle cx="0" cy="0" r="16" fill="none" stroke="#F3F1EA" stroke-width="1"/>
           <line x1="0" y1="-16" x2="0" y2="-10" stroke="#F3F1EA" stroke-width="1"/>
@@ -443,17 +402,14 @@
   </div>
 </section>
 
-<!-- ============ INTRO STRIP ============ -->
 <section class="intro">
   <div class="wrap">
-    <h2>A firm built at the crossroads of regions.</h2>
     <div class="intro-body">
       <p>From our office in Tbilisi, we advise companies, investors, and institutions on strategy and market entry, and build the relationships that turn cross-border ambition into completed transactions.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="sec-head">
@@ -490,7 +446,6 @@
   </div>
 </section>
 
-<!-- ============ INDUSTRIES ============ -->
 <section class="industries" id="industries">
   <div class="wrap">
     <div class="sec-head">
@@ -508,7 +463,6 @@
   </div>
 </section>
 
-<!-- ============ ABOUT ============ -->
 <section class="about" id="about">
   <div class="wrap">
     <div>
@@ -517,11 +471,11 @@
       <div class="about-pillars">
         <div class="pillar">
           <h4>Mission</h4>
-          <p>To connect companies, investors, and institutions across borders with the strategy and relationships needed to succeed.</p>
+          <p>To help companies, investors, and institutions succeed across borders — through strategic advice, trade facilitation, and the relationships that turn opportunity into agreement.</p>
         </div>
         <div class="pillar">
           <h4>Vision</h4>
-          <p>To be the trusted advisory bridge between Georgia, the EU, and the international markets that engage with them.</p>
+          <p>To be the trusted advisory bridge between Georgia, the EU, and international markets — advancing strategic partnership, trade, and investment between them.</p>
         </div>
       </div>
     </div>
@@ -540,7 +494,6 @@
   </div>
 </section>
 
-<!-- ============ NETWORK ============ -->
 <section class="network" id="network">
   <div class="wrap">
     <div>
@@ -570,7 +523,6 @@
           <line x1="230" y1="0" x2="230" y2="380"/>
           <line x1="370" y1="0" x2="370" y2="380"/>
         </g>
-        <!-- routes, fanning out from Tbilisi -->
         <path d="M330 90 C 250 60, 150 30, 68 14" stroke="#A8763E" stroke-width="1.5" fill="none" stroke-dasharray="3 6" stroke-linecap="round" opacity="0.75"/>
         <path d="M330 90 C 370 70, 410 55, 453 28" stroke="#A8763E" stroke-width="1.5" fill="none" stroke-dasharray="3 6" stroke-linecap="round" opacity="0.75"/>
         <path d="M330 90 C 350 120, 345 150, 332 168" stroke="#A8763E" stroke-width="1.5" fill="none" stroke-dasharray="3 6" stroke-linecap="round" opacity="0.75"/>
@@ -578,7 +530,6 @@
         <circle cx="330" cy="90" r="6" fill="#A8763E"/>
         <circle cx="330" cy="90" r="10" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.5"/>
         <text x="346" y="86" class="route-city">Tbilisi</text>
-        <!-- distant nodes -->
         <circle cx="453" cy="28" r="3" fill="#8894A6"/>
         <text x="445" y="24" text-anchor="end" class="route-label">Central Asia</text>
         <circle cx="68" cy="14" r="3" fill="#8894A6"/>
@@ -592,7 +543,6 @@
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
 <section class="contact" id="contact">
   <div class="wrap">
     <div>
@@ -621,7 +571,6 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -647,21 +596,15 @@
     </div>
     <div class="foot-membership">
       <img src="hellenic-georgian-chamber-logo.png" alt="Hellenic-Georgian Chamber of Commerce" class="chamber-logo">
-      <p>JSC NIXI Consultancy is a member of the Hellenic-Georgian Chamber of Commerce.</p>
+      <p>JSC NIXI Consultancy is a member of the <a href="https://www.hgcoc.eu" target="_blank" rel="noopener" style="color:var(--paper); border-bottom:1px solid var(--bronze);">Hellenic-Georgian Chamber of Commerce</a>.</p>
     </div>
     <div class="foot-bottom">
       <p>© 2019 JSC NIXI Consultancy. All rights reserved.</p>
-      <div class="foot-legal">
-        <a href="#privacy">Privacy Policy</a>
-        <a href="#terms">Terms of Use</a>
-        <a href="#cookies">Cookie Policy</a>
-      </div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu toggle
   const burger = document.getElementById('burgerBtn');
   const menu = document.getElementById('mobileMenu');
   burger.addEventListener('click', () => {
@@ -672,16 +615,6 @@
     menu.classList.remove('open');
     burger.setAttribute('aria-expanded', false);
   }));
-
-  // ===== Analytics placeholder =====
-  // Replace G-XXXXXXXXXX with the client's Google Analytics 4 Measurement ID.
-  // <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  // <script>
-  //   window.dataLayer = window.dataLayer || [];
-  //   function gtag(){dataLayer.push(arguments);}
-  //   gtag('js', new Date());
-  //   gtag('config', 'G-XXXXXXXXXX');
-  // </script>
 </script>
 
 </body>
